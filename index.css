@@ -2,6 +2,7 @@
     color: white;
     background-color:#222020;
     overflow: hidden;
+    height: 50px;
 }
 
 .topnav p {
@@ -28,6 +29,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right top;
+    margin: 0;
 }
 
 h1 {
