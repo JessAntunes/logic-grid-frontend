@@ -25,6 +25,14 @@
     background-color: #055362;
     color: white;
 }
+/* end navbar */
+
+
+
+
+
+
+
 
 body {
     background-image: url(images/green-mountains.jpg);
@@ -58,6 +66,22 @@ h3 {
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PUZZLE GRID */
 .gridbox {
     width: 32px;
     height: 32px;
@@ -77,12 +101,6 @@ div {
 td {
     display: table-cell;
     vertical-align: inherit;
-}
-
-table {
-    border-collapse: separate;
-    text-indent: initial;
-    border-spacing: 2px;
 }
 
 table {
@@ -144,3 +162,4 @@ table {
     background-color: white;
     text-align: center;
 }
+/* END OF PUZZLE GRID */
