@@ -1,4 +1,5 @@
 .topnav {
+    color: white;
     background-color:#222020;
     overflow: hidden;
 }
@@ -24,5 +25,27 @@
 
 body {
     background-image: url(images/green-mountains.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
 }
 
+h1 {
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+    color: #607d8b;
+}
+
+h3 {
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32;
+    color: #607d8b;
+}
+
+#display {
+    text-align: center;
+}
