@@ -49,3 +49,90 @@ h3 {
 #display {
     text-align: center;
 }
+
+.gridbox {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+}
+
+div {
+    display: block;
+}
+
+#puzzletable tr td {
+    font-family: Arial, Helvetica, Verdana;
+    font-size: 12px;
+    color: black;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.gridlinev2 {
+    width: 2px;
+    background-color: black;
+}
+
+.gridlinev {
+    width: 1px;
+    background-color: black;
+}
+
+.labelboxh {
+    width: 100px;
+    height: 32px;
+    background-color: white;
+    line-height: 32px;
+    padding-right: 4px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.hlabel {
+    background-color: black;
+    width: 22px;
+    text-align: center;
+}
+
+.gridheadertop {
+    background-color: black;
+    color: white !important;
+    text-align: center;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.gridlineh {
+    height: 1px;
+    background-color: black;
+}
+
+.gridlineh3 {
+    height: 3px;
+    background-color: black;
+}
+
+.labelboxv {
+    height: 125px;
+    width: 32px;
+    background-color: white;
+    text-align: center;
+}
