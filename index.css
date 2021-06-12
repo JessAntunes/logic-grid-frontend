@@ -1,0 +1,28 @@
+.topnav {
+    background-color:#222020;
+    overflow: hidden;
+}
+
+.topnav p {
+    float: left;
+    color: #222020;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav p:hover {
+    background-color: #403d3d;
+    color: black;
+}
+
+.topnav p.active {
+    background-color: #055362;
+    color: white;
+}
+
+body {
+    background-image: url(images/green-mountains.jpg);
+}
+
