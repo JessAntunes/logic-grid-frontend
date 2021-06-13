@@ -92,6 +92,14 @@ div {
     display: block;
 }
 
+#transparent {
+    margin: 100px;
+    padding: 50px;
+    background-color: white;
+    opacity: 0.60;
+
+}
+
 #puzzletable tr td {
     font-family: Arial, Helvetica, Verdana;
     font-size: 12px;
