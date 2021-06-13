@@ -66,6 +66,22 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    font-family: montserrat, sans-serif;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: montserrat, sans-serif;
+    font-size: 12px;
+}
+
+#description {
+    margin-bottom: 25px;
+}
+
 
 
 
