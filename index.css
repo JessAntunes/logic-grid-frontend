@@ -109,17 +109,16 @@ div {
 }
 
 #transparent {
+    margin-top: 10px;
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 50px;
     margin-bottom: 100px;
     padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
     background-color: white;
-    display:inline-block
-
+    display: inline-block
 }
 
 #puzzletable tr td {
