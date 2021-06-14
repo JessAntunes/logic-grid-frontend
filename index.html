@@ -10,10 +10,20 @@
 
     <body>
         <!-- navbar -->
-        <div class="topnav">
-            <p>Directions</p>
-            <p>Background</p>
-        </div> 
+        <div class="navbar">
+            <a>Directions</a>
+            <div class="dropdown">
+              <button class="dropbtn">Theme 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Marble</a>
+                <a href="#">City Rain</a>
+                <a href="#">Cloudy Trees</a>
+                <a href="#">Green Mountains</a>
+              </div>
+            </div> 
+          </div>
 
         <div class="row" id="display">
             <h1>LOGIC GRID</h1>
@@ -652,30 +662,31 @@
                                 <td colspan="12" class="gridlineh3"></td>
                             </tr>
                             </tbody></table>
+                        
 
 
+
+
+
+                        </div>
 
 
 
                     </div>
 
-
-
                 </div>
+        
+             </div>
 
+            <div class="col">
+                <div class="second-column" id="timer"></div>
+                <div class="second-column" id="best-times"></div>
+                <div class="second-column" id="clues"></div>
             </div>
         
         </div>
 
-        <div class="col">
-            <div class="second-column" id="timer"></div>
-            <div class="second-column" id="best-times"></div>
-            <div class="second-column" id="clues"></div>
-        </div>
 
-
-
-        
 
         <script></script>
     </body>
