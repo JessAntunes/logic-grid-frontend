@@ -25,6 +25,19 @@ class Game {
         for (let i = 0; i < Game.top_header.length; i++) {
             logicGrid.getElementById(`topheader${i+1}`).innerHTML = Game.top_header[i]
         }
+        for (let i = 0; i < Game.top_label.length; i++) {
+            logicGrid.getElementById(`labeltop${i+1}`).innerHTML = Game.top_label[i]
+        }
+        for (let i = 0; i < Game.side_header.length; i++) {
+            logicGrid.getElementById(`sideheader${i+1}`).innerHTML = Game.side_header[i]
+        }
+        for (let i = 0; i < Game.side_label.length; i++) {
+            logicGrid.getElementById(`labelleft${i+1}`).innerHTML = Game.side_label[i]
+        }
+
+        const cluesDiv = document.querySelector('#clues')
+
+        
         
         
 
