@@ -16,6 +16,11 @@ class Game {
     }
 
     renderGame() {
+        const transparentDiv = document.querySelector('#transparent')
+        transparentDiv.getElementByTagName('h4').innerText = Game.title;
+        transparentDiv.getElementById('description').innerText = Game.description;
+
+
         const logicGrid = document.querySelector('#puzzle-table')
         for (let i = 0; i < Game.top_header.length; i++) {
             logicGrid.getElementById(`topheader${i+1}`).innerHTML = Game.top_header[i]
