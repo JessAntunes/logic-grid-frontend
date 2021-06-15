@@ -17,9 +17,6 @@ class Game {
         for (let i = 0; i < this.top_header.length; i++) {
             document.getElementById(`topheader${i+1}`).innerHTML = `${this.top_header[i]}`
         }
-        for (let i = 0; i < this.top_header.length; i++) {
-            document.getElementById(`topheader${i+1}`).innerHTML = `${this.top_header[i]}`
-        }
         for (let i = 0; i < this.top_label.length; i++) {
             document.getElementById(`labeltop${i+1}`).innerHTML = `${this.top_label[i]}`
         }
