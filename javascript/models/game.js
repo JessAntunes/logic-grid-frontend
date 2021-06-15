@@ -1,6 +1,6 @@
 class Game {
 
-    constructor (id, title, discription, clues, solution, top_header, top_label, side_header, side_label) {
+    constructor (id, title, description, clues, solution, top_header, top_label, side_header, side_label) {
         this.id = id
         this.title = title
         this.description = description
@@ -17,44 +17,33 @@ class Game {
 
     renderGame() {
         const transparentDiv = document.querySelector('#transparent')
-        transparentDiv.getElementByTagName('h4').innerText = Game.title;
-        transparentDiv.getElementById('description').innerText = Game.description;
+        transparentDiv.getElementByTagName('h4').innerText = this.title;
+        transparentDiv.getElementById('description').innerText = this.description;
 
 
         const logicGrid = document.querySelector('#puzzle-table')
-        for (let i = 0; i < Game.top_header.length; i++) {
-            logicGrid.getElementById(`topheader${i+1}`).innerHTML = Game.top_header[i]
+        for (let i = 0; i < this.top_header.length; i++) {
+            logicGrid.getElementById(`topheader${i+1}`).innerHTML = this.top_header[i]
         }
-        for (let i = 0; i < Game.top_label.length; i++) {
-            logicGrid.getElementById(`labeltop${i+1}`).innerHTML = Game.top_label[i]
+        for (let i = 0; i < this.top_label.length; i++) {
+            logicGrid.getElementById(`labeltop${i+1}`).innerHTML = this.top_label[i]
         }
-        for (let i = 0; i < Game.side_header.length; i++) {
-            logicGrid.getElementById(`sideheader${i+1}`).innerHTML = Game.side_header[i]
+        for (let i = 0; i < this.side_header.length; i++) {
+            logicGrid.getElementById(`sideheader${i+1}`).innerHTML = this.side_header[i]
         }
-        for (let i = 0; i < Game.side_label.length; i++) {
-            logicGrid.getElementById(`labelleft${i+1}`).innerHTML = Game.side_label[i]
+        for (let i = 0; i < this.side_label.length; i++) {
+            logicGrid.getElementById(`labelleft${i+1}`).innerHTML = this.side_label[i]
         }
 
-        const cluesDiv = document.querySelector('#clues')
+        const cluesCard = document.querySelector('#clues')
 
-        
-        
-        
-
+        for (let i = 0; i < this.clues.length; i++) {
+            const cluesCardP = document.createElement('p')
+            cluesCardP.innerHTML = this.clues[i]
+            cluesCard.appendChild(cluesCardP)
+        }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
