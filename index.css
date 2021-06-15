@@ -113,6 +113,8 @@ h4 {
 }
 
 #description {
+    font-family: montserrat, sans-serif;
+    font-size: 14px;
     margin-bottom: 25px;
     margin-left: 50px;
     margin-right: 25px;
@@ -141,6 +143,17 @@ h4 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.second-column h6 {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+.second-column p {
+    font-size: 12px;
+    padding: 0px 15px 0px 15px;
+}
+
 #timer {
     vertical-align: top;
     background-color:#333;
@@ -158,6 +171,8 @@ h4 {
     height: 400px;
     overflow: scroll;
 }
+
+
 
 
 

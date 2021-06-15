@@ -11,6 +11,34 @@ class Game {
         this.side_label = side_label
         this.description = description
         
+        // document.getElementById('description').innerText = `${this.description}`
+        // document.getElementById('title').innerText = `${this.title}`
+
+        // for (let i = 0; i < this.top_header.length; i++) {
+        //     document.getElementById(`topheader${i+1}`).innerHTML = `${this.top_header[i]}`
+        // }
+        // for (let i = 0; i < this.top_label.length; i++) {
+        //     document.getElementById(`labeltop${i+1}`).innerHTML = `${this.top_label[i]}`
+        // }
+        // for (let i = 0; i < this.side_header.length; i++) {
+        //     document.getElementById(`sideheader${i+1}`).innerHTML = `${this.side_header[i]}`
+        // }
+        // for (let i = 0; i < this.side_label.length; i++) {
+        //     document.getElementById(`labelleft${i+1}`).innerHTML = `${this.side_label[i]}`
+        // }
+
+        // const cluesCard = document.querySelector('#clues')
+
+        // for (let i = 0; i < this.clues.length; i++) {
+        //     const cluesCardP = document.createElement('p')
+        //     cluesCardP.innerHTML = `${this.clues[i]}`
+        //     cluesCard.appendChild(cluesCardP)
+        // }
+        this.renderGame();
+        
+    }
+
+    renderGame() {
         document.getElementById('description').innerText = `${this.description}`
         document.getElementById('title').innerText = `${this.title}`
 
@@ -31,45 +59,11 @@ class Game {
 
         for (let i = 0; i < this.clues.length; i++) {
             const cluesCardP = document.createElement('p')
+            cluesCardP.classList = "clue"
             cluesCardP.innerHTML = `${this.clues[i]}`
             cluesCard.appendChild(cluesCardP)
         }
-        //renderGame();
-        
     }
-
-    // renderGame() {
-    //     // const transparentDiv = document.querySelector('#transparent')
-        
-    //     const cluesCard = document.querySelector('#clues')
-
-    //     return 
-    //         document.getElementById('description').innerText = `${this.description}`
-    //         document.getElementsByTagName('h4').innerText = `${this.title}`
-            
-    //         for (let i = 0; i < this.top_header.length; i++) {
-    //             document.getElementById(`topheader${i+1}`).innerHTML += `${this.top_header[i]}`
-    //         }
-    //         for (let i = 0; i < this.top_label.length; i++) {
-    //             document.getElementById(`labeltop${i+1}`).innerHTML = `${this.top_label[i]}`
-    //         }
-    //         for (let i = 0; i < this.side_header.length; i++) {
-    //             document.getElementById(`sideheader${i+1}`).innerHTML = `${this.side_header[i]}`
-    //         }
-    //         for (let i = 0; i < this.side_label.length; i++) {
-    //             document.getElementById(`labelleft${i+1}`).innerHTML = `${this.side_label[i]}`
-    //         }
-
-        
-
-    //         for (let i = 0; i < this.clues.length; i++) {
-    //             const cluesCardP = document.createElement('p')
-    //             cluesCardP.innerHTML = `${this.clues[i]}`
-    //             cluesCard.appendChild(cluesCardP)
-    //         }
-        
-
-    // }
 
 
 }
