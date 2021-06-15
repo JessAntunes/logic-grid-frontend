@@ -122,18 +122,21 @@ h4 {
 .grid-container {
     display: grid;
     grid-template-columns: 800px auto;
-    align-items: center;
+    align-items: top;
 }
 
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
 /* second column */
 .second-column {
     font-family: montserrat, sans-serif;
     color: white;
     width: 250px;
-    margin-bottom: 20px;
-    margin-left: 40px;
-    margin-right: 50px;
+    margin: 0 50px 20px 40px;
     vertical-align: top;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -182,10 +185,9 @@ div {
 }
 
 #transparent {
-    margin-top: 10px;
+
     margin-left: 100px;
     margin-right: 50px;
-    margin-bottom: 100px;
     padding-top: 20px;
     padding-bottom: 50px;
     background-color: white;
