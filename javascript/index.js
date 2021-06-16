@@ -1,6 +1,6 @@
 const playerSolution = [["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "O", "O", "", "", "", "", "O", "", ""], ["", "", "O", "", "O", "", "", "", "", "", "", "O", "", "O", "", ""], ["O", "", "", "", "", "O", "", "", "", "", "", "", "", "", "", ""], ["", "", "O", "", "", "", "", "", "", "", "", "", "", "", "", ""]]
 let clueDone = false
-let marker = false
+let checked = true
 
 
 document.addEventListener("DOMContentLoaded", function(){ console.log("DOM Content Loaded")
@@ -21,7 +21,13 @@ document.addEventListener("DOMContentLoaded", function(){ console.log("DOM Conte
         }
 
         if(event.target.matches(".gridbox")) {
-            console.log(event.target.id)
+            checked = !checked
+            if(checked === true) {
+                event.target.style.backgroundImage = "url('images/checked.png')"
+            } else {
+                event.target.style.backgroundImage = "none"
+            }
+            // console.log(event.target.id)
         }
     
 
