@@ -1,8 +1,9 @@
 const playerSolution = [["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]]
+const gameSolution = Game.solution
 let clueDone = false
 let checked = false
 let exed = false
-let marker = true
+let marker = false
 
 
 
@@ -25,19 +26,19 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             }
         }
 
-        if(event.target.matches(".switch")) {
+        if(event.target.matches(".toggle")) {
             marker = !marker
-            if(marker) {
-                event.target.style.textDecoration = "none"
+            if(marker){
+                event.target.classList.toggle("before")
             } else {
-                event.target.style.textDecoration = "none"
+                event.target.classList.toggle
             }
         }
 
         if(event.target.matches(".gridbox")) {
-            if(marker === true) {
+            if(marker) {
                 checked = !checked
-                if(checked === true) {
+                if(checked) {
                     event.target.style.backgroundImage = "url('images/checked.png')"
                     addOToSolution()
                     win()
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
                     win()
                 }
             } else {
-                
+                exed = !exed
                 if(exed === true) {
                     event.target.style.backgroundImage = "url('images/exes.png')"
                     addBlankToSolution()
@@ -93,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
 
             function win() {
                 console.log(playerSolution)
-                if (playerSolution === this.solution) {
+                if (playerSolution === gameSolution) {
                     console.log("YOU WIN!")
                 } else {
                     console.log("no match")

@@ -1,5 +1,7 @@
 class Game {
 
+    
+
     constructor (id, title, clues, solution, top_header, top_label, side_header, side_label, description) {
         this.id = id
         this.title = title
@@ -12,7 +14,6 @@ class Game {
         this.description = description
         
         this.renderGame();
-        
     }
 
     renderGame() {
@@ -41,6 +42,8 @@ class Game {
             cluesCard.appendChild(cluesCardP)
         }
     }
+
+    
 
 
 }

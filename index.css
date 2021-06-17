@@ -195,7 +195,7 @@ h4 {
   position: relative;
 }
 
-.toggle-thumb {
+.toggle {
   position: absolute;
   top: 0;
   left: 0;
@@ -209,7 +209,7 @@ h4 {
   cursor: pointer;
 }
 
-.toggle-thumb:before {
+.toggle:before {
   content: "";
   height: 26px;
   width: 26px;
