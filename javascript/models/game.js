@@ -1,6 +1,6 @@
 class Game {
 
-    
+    static all = []
 
     constructor (id, title, clues, solution, top_header, top_label, side_header, side_label, description) {
         this.id = id
@@ -12,6 +12,8 @@ class Game {
         this.side_header = side_header
         this.side_label = side_label
         this.description = description
+
+        Game.all.push(this);
         
         this.renderGame();
     }
@@ -43,6 +45,14 @@ class Game {
         }
     }
 
+    // win() {
+    //         console.log(this)
+    //         if (playerSolution === this.solution) {
+    //             console.log("YOU WIN!")
+    //         } else {
+    //             console.log("no match")
+    //         }
+    // }
     
 
 

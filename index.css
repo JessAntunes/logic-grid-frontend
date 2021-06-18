@@ -162,10 +162,24 @@ h4 {
     padding: 0px 15px 0px 15px;
 }
 
-#timer {
+#timer-div {
     vertical-align: top;
     background-color:#333;
     height: 100px;
+}
+
+#timer {
+    color: white;
+    height: 20px;
+    align-items: center;
+    padding-left: 95px;
+}
+
+.start {
+    color: white;
+    height: 10px;
+    align-items: center;
+    padding-left: 80px;
 }
 
 #best-times {
@@ -179,6 +193,12 @@ h4 {
     height: 400px;
     overflow: scroll;
 }
+
+
+
+
+
+
 
 
 /* Toggle Switch */
@@ -227,7 +247,7 @@ h4 {
   height: 0;
 }
 
-.checkbox:checked + .toggle-thumb:before {
+.checkbox:checked + .toggle:before {
   transform: translateX(26px);
 }
 
