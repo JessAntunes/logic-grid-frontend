@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             }
 
             function randomNumber() {
-                return Math.floor(Math.random() * (12000 - 5)) + 5;
+                return Math.floor(Math.random() * (2000000- 5)) + 5;
             }
         
             function changeDisplayScore() {
@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
         newScoreForm.addEventListener("submit", event =>{ event.preventDefault(); 
             const name = event.target.name.value
             const submit = event.target.submit
+            scoreFormContainer.style.display = "none";
             
             console.log("SHOW ME SUBMIT - IN THE FORM:  ", submit)
             
@@ -153,13 +154,15 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
                 method: "POST",
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify({ 
-                    "username": name,
+                    "name": name,
                     "score": score
                 })    
             })
 
             .then(response => response.json())
             .then(newScore => renderScore(newScore))
+
+            
         })
 
 

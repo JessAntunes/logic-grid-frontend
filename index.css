@@ -256,7 +256,6 @@ div {
 }
 
 #transparent {
-
     margin-left: 100px;
     margin-right: 50px;
     padding-top: 20px;
@@ -348,17 +347,24 @@ table {
     width: stretch;
     height: auto;
     display: none;
-    background: #515DA2;
+    background: #accdbe;
     opacity: .8;
-  }
+    padding-bottom: 50px;
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container h3 {
+    color: black
+}
   
-  .add-toy-form {
-    width: 80%
-  }
+.add-score-form {
+    width: 80%;
+    align-content: center;
+}
   
-  .submit {
+.submit {
     position: relative;
-    background-color: #e04b52;
+    background-color: rgb(128, 193, 166);
     border-radius: 5px;
     height: 2rem;
     width: max-content;
@@ -367,20 +373,20 @@ table {
     justify-self: center;
     font-family: monospace;
     margin: 3px;
-  }
-  
-  .submit:hover {
+}
+
+.submit:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
-  }
-  
-  
-  .input-text {
+    border: #86938f solid 1px;
+    color: #363434;
+}
+
+
+.input-text {
     border-radius: 5px;
     height: 2rem;
     width: 60%;
     font-size: 18px;
     font-family: monospace;
     margin: 3px;
-  }
+}
