@@ -60,18 +60,12 @@
                                 <tr>
                                     <td class="grid0" ></td>
                                     <td class="grid0" id="toggle">
-                                        <p>Marker:</p>
+                                        <p>Select:</p>
                                         <!-- put toggle here -->
-                                        <label class="switch">
-                                            <input type="checkbox" class="checkbox">
-                                            <span class="toggle">
-                                       
-                                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:rgb(128, 193, 166);transform:-ms-filter"><path d="M10 15.586L6.707 12.293 5.293 13.707 10 18.414 19.707 8.707 18.293 7.293z"></path></svg>
-                                       
-                                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#060303;transform:-ms-filter"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
-                                       
-                                            </span>
-                                       </label>
+    
+                                            <button class="marker">✓</button>
+                                            
+                                        
                                        
                                     </td>
                                     <td class="gridlinev2"></td>
@@ -698,15 +692,14 @@
              </div>
 
             <div class="col">
-                <div class="second-column" id="timer-div">
-                    <h6>Timer</h6>
-                    <div id="timer"></div>
-                    <btn class="start">Start Timer</btn>
-                    <!-- onclick="clearInterval(timerVar)" -->
+                <div class="second-column" id="score-div">
+                    <h6>Your Score</h6>
+                    <h2 id="your-score"></h2>
+                  
                 </div>
 
-                <div class="second-column" id="best-times">
-                    <h6>Best Times</h6>
+                <div class="second-column" id="highscores">
+                    <h6>Highscores</h6>
                 </div>
 
                 <div class="second-column" id="clues">
