@@ -4,6 +4,7 @@ let clueDone = false
 let checked = false
 let exed = false
 let marker = false
+let score = 1000000000
 
 
 // const {id, title, clues, solution, top_header, top_label, side_header, side_label, description} = currentGame
@@ -22,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
            currentGame = new Game(id, title, clues, solution, top_header, top_label, side_header, side_label, description)
     })
 
+    
+
    
 
     document.addEventListener("click", event => { event.preventDefault();
@@ -37,36 +40,48 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             }
         }
 
-        if(event.target.matches(".toggle")) {
-            marker = !marker
+        if(event.target.matches(".marker")) {
+            if (marker) {
+                event.target.style.backgroundColor = "#d5d7dd"
+                marker = false
+                score -= randomNumber()
+            } else {
+                event.target.style.backgroundColor = "rgb(128, 193, 166)"
+                marker = true
+                score -= randomNumber()
+            }
         }
 
-        if(event.target.matches(".start")) {
-            countTimer()
-        }
+        
 
         if(event.target.matches(".gridbox")) {
             if(marker) {
-                checked = !checked
-                if(checked) {
+                if(event.target.name == "checked") {
+                    event.target.name = "none"
+                    event.target.style.backgroundImage = "none"
+                    addBlankToSolution()
+                    win(currentGame)
+                    changeDisplayScore()
+                } else {
+                    event.target.name = "checked"
                     event.target.style.backgroundImage = "url('images/checked.png')"
                     addOToSolution()
                     win(currentGame)
-                } else {
-                    event.target.style.backgroundImage = "none"
-                    addBlankToSolution()
-                    win(currentGame)
+                    changeDisplayScore()
                 }
             } else {
-                exed = !exed
-                if(exed === true) {
-                    event.target.style.backgroundImage = "url('images/exes.png')"
-                    addBlankToSolution()
-                    win(currentGame)
-                } else {
+                if(event.target.name == "exed") {
+                    event.target.name = "none"
                     event.target.style.backgroundImage = "none"
                     addBlankToSolution()
                     win(currentGame)
+                    changeDisplayScore()
+                } else {
+                    event.target.name = "exed"
+                    event.target.style.backgroundImage = "url('images/exes.png')"
+                    addBlankToSolution()
+                    win(currentGame)  
+                    changeDisplayScore()
                 }
             }
 
@@ -102,31 +117,24 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
                 }
             }
 
+            function randomNumber() {
+                return Math.floor(Math.random() * (12000 - 5)) + 5;
+            }
+        
+            function changeDisplayScore() {
+                score -= randomNumber()
+                document.getElementById('your-score').innerText = score
+            }
+
 
             function win(g) {
                 if (JSON.stringify(playerSolution) === JSON.stringify(g.solution)) {
                     console.log("YOU WIN!")
-                } else {
-                    console.log("try again")
-                    console.log(g.solution)
+                    
                 }
             }
             
-            var timerVar = setInterval(countTimer, 1000);
-            var totalSeconds = 0;
-            function countTimer() {
-                ++totalSeconds;
-                var hour = Math.floor(totalSeconds /3600);
-                var minute = Math.floor((totalSeconds - hour*3600)/60);
-                var seconds = totalSeconds - (hour*3600 + minute*60);
-                if(hour < 10)
-                    hour = "0"+hour;
-                if(minute < 10)
-                    minute = "0"+minute;
-                if(seconds < 10)
-                    seconds = "0"+seconds;
-                document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
-            }
+            
 
 
 
