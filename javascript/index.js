@@ -1,10 +1,11 @@
 const playerSolution = [["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]]
-// const gameSolution = Game.all[0]
+
 let clueDone = false
 let checked = false
 let exed = false
 let marker = false
 let score = 1000000000
+
 
 
 // const {id, title, clues, solution, top_header, top_label, side_header, side_label, description} = currentGame
@@ -30,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
     document.addEventListener("click", event => { event.preventDefault();
         const firstIndex = event.target.id[0]
         const secondIndex = event.target.id.slice(1,3) - 1
+        const scoreFormContainer = document.querySelector(".container")
+        const newScoreForm = document.querySelector(".add-score-form")
 
         if(event.target.matches(".clue")) {
             clueDone = !clueDone
@@ -130,15 +133,34 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             function win(g) {
                 if (JSON.stringify(playerSolution) === JSON.stringify(g.solution)) {
                     console.log("YOU WIN!")
-                    
+                    const scoreFormContainer = document.querySelector(".container")
+                    scoreFormContainer.style.display = "block";
                 }
             }
-            
-            
-
-
+        
 
         }
+
+        
+
+        newScoreForm.addEventListener("submit", event =>{ event.preventDefault(); 
+            const name = event.target.name.value
+            const submit = event.target.submit
+            
+            console.log("SHOW ME SUBMIT - IN THE FORM:  ", submit)
+            
+            fetch("http://127.0.0.1:3000/games/1/highscores", {
+                method: "POST",
+                headers: { "Content-Type": "application/json"},
+                body: JSON.stringify({ 
+                    "username": name,
+                    "score": score
+                })    
+            })
+
+            .then(response => response.json())
+            .then(newScore => renderScore(newScore))
+        })
 
 
     })
