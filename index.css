@@ -162,27 +162,18 @@ h4 {
     padding: 0px 15px 0px 15px;
 }
 
-#timer-div {
+#score-div {
     vertical-align: top;
     background-color:#333;
     height: 100px;
 }
 
-#timer {
-    color: white;
-    height: 20px;
-    align-items: center;
-    padding-left: 95px;
+#score-div h2 {
+    text-align: center;
 }
 
-.start {
-    color: white;
-    height: 10px;
-    align-items: center;
-    padding-left: 80px;
-}
 
-#best-times {
+#highscores {
     background-color:#333;
     height: 200px;
     
@@ -190,7 +181,7 @@ h4 {
 
 #clues {
     background-color:#333;
-    height: 400px;
+    height: 609px;
     overflow: scroll;
 }
 
@@ -205,64 +196,47 @@ h4 {
 #toggle p {
   font-family: montserrat, sans-serif;
   font-weight: bold;
-  padding: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 8px;
 }
-
-.switch {
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  position: relative;
-}
-
-.toggle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #8e9297;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.toggle:before {
-  content: "";
-  height: 26px;
-  width: 26px;
-  position: absolute;
-  left: 4px;
-  bottom: 4px;
-  border-radius: 50%;
-  background-color: #E2E8F0;
-  transition: .4s all ease;
-}
-
-.checkbox {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.checkbox:checked + .toggle:before {
-  transform: translateX(26px);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+button {
+    display: inline-block;
+    background-color: #d5d7dd;
+    border-radius: 10px;
+    border: 2px #cccccc;
+    color: #2c2c2c;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    height: 30px;
+    width: 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+  }
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  button:hover {
+    background-color: #f7c2f9;
+  }
+  button:hover span {
+    padding-right: 25px;
+  }
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
 /* PUZZLE GRID */
 .gridbox {
