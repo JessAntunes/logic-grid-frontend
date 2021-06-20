@@ -4,7 +4,7 @@ let clueDone = false
 let checked = false
 let exed = false
 let marker = false
-let score = 1000000000
+let score = 100000000
 
 
 
@@ -14,6 +14,7 @@ let score = 1000000000
 document.addEventListener("DOMContentLoaded", function() { console.log("DOM Content Loaded")
 
    API.addGames();
+   API.addHighscores();
 
    let currentGame = {}
 
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
         const firstIndex = event.target.id[0]
         const secondIndex = event.target.id.slice(1,3) - 1
         const scoreFormContainer = document.querySelector(".container")
-        const newScoreForm = document.querySelector(".add-score-form")
+        
 
         if(event.target.matches(".clue")) {
             clueDone = !clueDone
@@ -47,11 +48,9 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             if (marker) {
                 event.target.style.backgroundColor = "#d5d7dd"
                 marker = false
-                score -= randomNumber()
             } else {
                 event.target.style.backgroundColor = "rgb(128, 193, 166)"
                 marker = true
-                score -= randomNumber()
             }
         }
 
@@ -88,6 +87,8 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
                 }
             }
 
+            
+
             function addOToSolution() {
                 if(firstIndex === "A"){
                     playerSolution[0][secondIndex] = "O"
@@ -121,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             }
 
             function randomNumber() {
-                return Math.floor(Math.random() * (2000000- 5)) + 5;
+                return Math.floor(Math.random() * (2000000 - 5)) + 5;
             }
         
             function changeDisplayScore() {
@@ -133,38 +134,42 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             function win(g) {
                 if (JSON.stringify(playerSolution) === JSON.stringify(g.solution)) {
                     console.log("YOU WIN!")
-                    const scoreFormContainer = document.querySelector(".container")
                     scoreFormContainer.style.display = "block";
                 }
             }
         
+            
+
+            
 
         }
 
-        
+        if (event.target.matches(".submit")) {
 
-        newScoreForm.addEventListener("submit", event =>{ event.preventDefault(); 
-            const name = event.target.name.value
-            const score = score
-            const submit = event.target.submit
+            console.log("you clicked submit")
+            const name = scoreFormContainer.querySelector(".input-text").value
+            
             scoreFormContainer.style.display = "none";
+        
             
-            console.log("SHOW ME SUBMIT - IN THE FORM:  ", submit)
-            
+        
             fetch("http://127.0.0.1:3000/games/1/highscores", {
                 method: "POST",
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify({ 
                     "name": name,
-                    "score": score
+                    "score": score,
+                    "game_id": 1
                 })    
             })
 
             .then(response => response.json())
-            .then(newScore => renderScore(newScore))
+            .then(newScore => { 
+                Highscore.renderHighscore
+               
+            })
 
-            
-        })
+        }
 
 
     })

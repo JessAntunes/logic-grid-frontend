@@ -14,13 +14,15 @@ class API {
     static addHighscores() {
         fetch("http://127.0.0.1:3000/games/1/highscores")
         .then(response => response.json())
-        .then(highscores => {
-                highscores.forEach( highscore => {
+        .then(scores => {
+                scores.forEach( highscore => {
                 const {id, name, score, game_id} = highscore
                 new Highscore(id, name, score, game_id)
             })
         })
     }
+
+  
    
 }
 

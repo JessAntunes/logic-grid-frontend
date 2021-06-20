@@ -8,13 +8,13 @@ class Highscore {
         this.score = score
         this.game_id = game_id
         
-        Score.all.push(this);
+        Highscore.all.push(this);
         
         this.renderHighscore();
     }
 
     renderHighscore() {
-        const scoresCard = document.querySelector('#score-div')
+        const scoresCard = document.querySelector('#highscores')
         const scoresCardP = document.createElement('p')
 
         scoresCardP.classList = "score"
