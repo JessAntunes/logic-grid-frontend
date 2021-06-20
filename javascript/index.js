@@ -148,10 +148,6 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
 
             console.log("you clicked submit")
             const name = scoreFormContainer.querySelector(".input-text").value
-            
-            scoreFormContainer.style.display = "none";
-        
-            
         
             fetch("http://127.0.0.1:3000/games/1/highscores", {
                 method: "POST",
@@ -164,10 +160,9 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             })
 
             .then(response => response.json())
-            .then(newScore => { 
-                Highscore.renderHighscore
-               
-            })
+            .then(
+                API.addHighscores()
+            )
 
         }
 

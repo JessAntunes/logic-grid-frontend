@@ -142,6 +142,8 @@ h4 {
     justify-content: flex-start;
 }
 
+
+
 /* second column */
 .second-column {
     font-family: montserrat, sans-serif;
@@ -177,6 +179,7 @@ h4 {
 #highscores {
     background-color:#333;
     height: 200px;
+    overflow: scroll;
     
 }
 
@@ -238,6 +241,12 @@ h4 {
     opacity: 1;
     right: 0;
   }
+
+
+
+
+
+
 
 /* PUZZLE GRID */
 .gridbox {

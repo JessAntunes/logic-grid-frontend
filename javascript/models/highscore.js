@@ -14,12 +14,12 @@ class Highscore {
     }
 
     renderHighscore() {
-        const scoresCard = document.querySelector('#highscores')
+        const scoresDiv = document.querySelector('#highscores-div')
         const scoresCardP = document.createElement('p')
 
         scoresCardP.classList = "score"
         scoresCardP.innerHTML = `${this.name} ${this.score}`
-        scoresCard.appendChild(scoresCardP)
+        scoresDiv.appendChild(scoresCardP)
     }
 
 }

@@ -12,6 +12,8 @@ class API {
     }
 
     static addHighscores() {
+        const scoresDiv = document.querySelector('#highscores-div')
+        scoresDiv.innerHTML = ""
         fetch("http://127.0.0.1:3000/games/1/highscores")
         .then(response => response.json())
         .then(scores => {
