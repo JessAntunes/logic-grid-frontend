@@ -10,6 +10,17 @@ class API {
             })
         })
     }
+
+    static addHighscores() {
+        fetch("http://127.0.0.1:3000/games/1/highscores")
+        .then(response => response.json())
+        .then(highscores => {
+                highscores.forEach( highscore => {
+                const {id, name, score} = highscore
+                new Highscore(id, name, score)
+            })
+        })
+    }
    
 }
 
