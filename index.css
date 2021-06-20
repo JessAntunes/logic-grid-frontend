@@ -133,6 +133,7 @@ h4 {
     display: grid;
     grid-template-columns: 800px auto;
     align-items: top;
+    margin-bottom: 50px;
 }
 
 .col{
@@ -181,7 +182,7 @@ h4 {
 
 #clues {
     background-color:#333;
-    height: 609px;
+    height: 487px;
     overflow: scroll;
 }
 
@@ -198,7 +199,7 @@ h4 {
   font-weight: bold;
   padding: 0px 0px 0px 8px;
 }
-button {
+.marker {
     display: inline-block;
     background-color: #d5d7dd;
     border-radius: 10px;
@@ -213,13 +214,13 @@ button {
     cursor: pointer;
     margin: 2px;
   }
-  button span {
+  .marker span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
-  button span:after {
+  .marker span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -227,13 +228,13 @@ button {
     right: -20px;
     transition: 0.5s;
   }
-  button:hover {
+  .marker:hover {
     background-color: #f7c2f9;
   }
-  button:hover span {
+  .marker:hover span {
     padding-right: 25px;
   }
-  button:hover span:after {
+  .marker:hover span:after {
     opacity: 1;
     right: 0;
   }
@@ -347,6 +348,7 @@ table {
     width: stretch;
     height: auto;
     display: none;
+    align-content: center;
     background: #accdbe;
     opacity: .8;
     padding-bottom: 50px;
@@ -361,14 +363,19 @@ table {
     width: 80%;
     align-content: center;
 }
+
+.add-score-form h4 {
+    font-size: 20px;
+    margin-left: 0;
+}
   
 .submit {
     position: relative;
-    background-color: rgb(128, 193, 166);
+    background-color: whitesmoke;
     border-radius: 5px;
     height: 2rem;
     width: max-content;
-    color: whitesmoke;
+    color: #363434;
     font-size: 18px;
     justify-self: center;
     font-family: monospace;
@@ -376,9 +383,10 @@ table {
 }
 
 .submit:hover {
-    background-color: whitesmoke;
+    background-color: rgb(128, 193, 166);
+    color: whitesmoke;
     border: #86938f solid 1px;
-    color: #363434;
+    
 }
 
 
