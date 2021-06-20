@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
 
         newScoreForm.addEventListener("submit", event =>{ event.preventDefault(); 
             const name = event.target.name.value
+            const score = score
             const submit = event.target.submit
             scoreFormContainer.style.display = "none";
             
