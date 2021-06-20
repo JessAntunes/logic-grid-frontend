@@ -45,15 +45,4 @@ class Game {
         }
     }
 
-    // win() {
-    //         console.log(this)
-    //         if (playerSolution === this.solution) {
-    //             console.log("YOU WIN!")
-    //         } else {
-    //             console.log("no match")
-    //         }
-    // }
-    
-
-
 }
