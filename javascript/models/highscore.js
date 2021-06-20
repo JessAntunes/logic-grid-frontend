@@ -2,10 +2,11 @@ class Highscore {
 
     static all = []
 
-    constructor (id, name, score) {
+    constructor (id, name, score, game_id) {
         this.id = id
         this.name = name
         this.score = score
+        this.game_id = game_id
         
         Score.all.push(this);
         

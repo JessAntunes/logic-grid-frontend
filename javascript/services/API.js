@@ -16,8 +16,8 @@ class API {
         .then(response => response.json())
         .then(highscores => {
                 highscores.forEach( highscore => {
-                const {id, name, score} = highscore
-                new Highscore(id, name, score)
+                const {id, name, score, game_id} = highscore
+                new Highscore(id, name, score, game_id)
             })
         })
     }
