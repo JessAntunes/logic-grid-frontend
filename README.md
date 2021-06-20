@@ -1,7 +1,7 @@
 # Logic Grid
 Logic Grid is a website for those who love logic puzzles, but wants a site that has a calm, modern interface that allows for easier concentration without the distractions of ads and pop-ups. 
 
-### [View the Demo](...)
+### [View the Demo](https://youtu.be/OohM3gDU7gM)
 <br>
 
 ![ScreenShot](images/screenshot.png)
