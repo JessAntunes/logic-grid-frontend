@@ -158,6 +158,7 @@ h4 {
     font-size: 14px;
     text-align: center;
     margin: 10px 0px 10px 0px;
+    position: sticky;
 }
 
 .second-column p {
@@ -169,18 +170,21 @@ h4 {
     vertical-align: top;
     background-color:#333;
     height: 100px;
-}
-
-#score-div h2 {
     text-align: center;
 }
+
+
 
 
 #highscores {
     background-color:#333;
     height: 200px;
     overflow: scroll;
-    
+    text-align: center;
+}
+
+#highscores p {
+    font-size: 13px;
 }
 
 #clues {
