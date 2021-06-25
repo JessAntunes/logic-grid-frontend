@@ -4,6 +4,7 @@ let clueDone = false
 let checked = false
 let exed = false
 let marker = false
+let directions = false
 let score = 100000000
 
 
@@ -34,6 +35,16 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
         const secondIndex = event.target.id.slice(1,3) - 1
         const scoreFormContainer = document.querySelector(".container")
         
+        if(event.target.matches("#directions")) {
+            const directionDiv = document.getElementById("directionDiv")
+            if(directions) {
+                directions = false
+                directionDiv.style.display = "none";
+            } else {
+                directions = true
+                directionDiv.style.display = "block";
+            }
+        }
 
         if(event.target.matches(".clue")) {
             clueDone = !clueDone
