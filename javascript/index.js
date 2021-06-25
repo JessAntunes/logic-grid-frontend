@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
         const firstIndex = event.target.id[0]
         const secondIndex = event.target.id.slice(1,3) - 1
         const scoreFormContainer = document.querySelector(".container")
+        const body = document.querySelector("body")
+        const title = document.getElementById("logic")
+        const tagline = document.getElementById("tagline")
         
         if(event.target.matches("#directions")) {
             const directionDiv = document.getElementById("directionDiv")
@@ -44,6 +47,30 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
                 directions = true
                 directionDiv.style.display = "block";
             }
+        }
+
+        if(event.target.matches("#marble")) {
+            body.style.backgroundImage = "url(images/marble.jpg)"
+            tagline.style.color = "#404446"
+            title.style.color = "#404446"
+        }
+
+        if(event.target.matches("#city-rain")) {
+            body.style.backgroundImage = "url(images/city-rain.jpg)"
+            tagline.style.color = "#234F4A"
+            title.style.color = "#234F4A"
+        }
+        
+        if(event.target.matches("#cloudy")) {
+            body.style.backgroundImage = "url(images/cloud-covered-trees.jpg)"
+            tagline.style.color = "#607d8b"
+            title.style.color = "#607d8b"
+        }
+
+        if(event.target.matches("#mountains")) {
+            body.style.backgroundImage = "url(images/green-mountains.jpg)"
+            tagline.style.color = "#607d8b"
+            title.style.color = "#607d8b"
         }
 
         if(event.target.matches(".clue")) {
