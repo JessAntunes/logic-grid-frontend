@@ -6,6 +6,7 @@ let exed = false
 let marker = false
 let directions = false
 let score = 100000000
+let won = false
 
 
 
@@ -92,7 +93,11 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
             }
         }
 
-        
+        if (event.target.matches("#timer-btn")) {
+            console.log("clicked")
+            runTimer()
+        }
+
 
         if(event.target.matches(".gridbox")) {
             if(marker) {
@@ -168,19 +173,33 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
                 document.getElementById('your-score').innerText = score
             }
 
-
             function win(g) {
                 if (JSON.stringify(playerSolution) === JSON.stringify(g.solution)) {
+                    won = true
                     console.log("YOU WIN!")
                     scoreFormContainer.style.display = "block";
                 }
             }
+            
         
-            
-
-            
-
         }
+
+        
+
+        // function runTimer() {   
+        //     let time = 0
+        //         setInterval(count, 1000)
+        //         function count() {
+        //             let timer = document.getElementById("timer")
+        //             if (won === false) {
+        //                 time += 1
+        //                 console.log(time)
+        //                 timer.innerText = time
+        //             }
+        //         }
+        // }
+
+       
 
         if (event.target.matches(".submit")) {
 
@@ -204,6 +223,7 @@ document.addEventListener("DOMContentLoaded", function() { console.log("DOM Cont
 
         }
 
+        
 
     })
     
